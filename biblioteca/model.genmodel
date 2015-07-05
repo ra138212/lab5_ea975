@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/biblioteca/src" modelPluginID="biblioteca" modelName="Model"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>model.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Model" disposableProviderFactory="true"
+      ecorePackage="Model.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//funcionario">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//funcionario/idfuncionario"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//funcionario/nome"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//funcionario/registrofuncionario"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//funcionario/excluifuncionario"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//funcionario/atualizafuncionario"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//terminal">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//terminal/idterminal"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//terminal/idfuncionario"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//terminal/horalogin"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//terminal/idbiblioteca"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//terminal/registraacesso"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//biblioteca">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//biblioteca/idbiblioteca"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//biblioteca/registrabiblioteca"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//biblioteca/excluibiblioteca"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//exemplar">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//exemplar/idexemplar"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//exemplar/idpublicacao"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//exemplar/bloqueado"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//exemplar/idbiblioteca"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//exemplar/registraexemplar"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//exemplar/excluiexemplar"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//exemplar/bloqueiaexemplar"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//emprestimo">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//emprestimo/idemprestimo"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//emprestimo/idexemplar"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//emprestimo/registrousuario"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//emprestimo/datadevolucao"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//emprestimo/idbiblioteca"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//emprestimo/realizaemprestimo"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//emprestimo/realizadevolucao"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//emprestimo/calculamulta"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//publicacao">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//publicacao/idpublicacao"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//publicacao/autor"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//publicacao/assunto"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//publicacao/idbiblioteca"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//publicacao/registrapublicacao"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//publicacao/excluipublicacao"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//livro"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//periodico"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//tese"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//manual"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//usuario">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/registro"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/nome"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/sobrenome"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/pronome"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/datanascimento"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/email"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/cpf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/fone"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/endereco"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/cep"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/cidade"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/estado"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//usuario/pais"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//usuario/registrausuario"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//usuario/excluiusuario"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//usuario/atualizausuario"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//aluno">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//aluno/curso"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//aluno/registraaluno"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//aluno/excluialuno"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//aluno/atualizaaluno"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Model.ecore#//professor">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Model.ecore#//professor/instituicao"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//professor/registraprofessor"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//professor/excluiprofessor"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Model.ecore#//professor/atualizaprofessor"/>
+    </genClasses>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
+      disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+  </genPackages>
+</genmodel:GenModel>
